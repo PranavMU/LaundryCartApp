@@ -7,6 +7,7 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 2px 48px #0000000F;
     opacity: 1;
+    position: initial;
 }
 
 .header-text {
@@ -27,9 +28,11 @@
 .ul-container {
     display: -webkit-box;
     float: right;
-}.header-text-container {
-    display: block;
 }
+    .header-text-container {
+        display: block;
+        width: 1421px;
+    }
 
 .header-list-container {
     display: inherit;
@@ -57,7 +60,7 @@ li.home {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
     /* border: 0.005px solid; */
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, .1);
     position: absolute;
     list-style: none;
 }
@@ -71,10 +74,10 @@ li.pricing {
     opacity: 1;
     list-style: none;
     position: absolute;
-    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(0, 0, 0, .1);
     border-left: 0px;
-    border-right: 1px solid rgba(0, 0, 0, .2);
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 li.career {
     top: 13px;
@@ -85,8 +88,8 @@ li.career {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
     list-style: none;
-    border-top: 1px solid rgba(0, 0, 0, .2);
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
     position: absolute;
 }
 p {
