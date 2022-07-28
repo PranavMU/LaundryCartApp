@@ -1,5 +1,6 @@
 import { Header } from "../header/header";
 import padlock from "../assests/padlock.svg";
+import Referral from "../referral/referral";
 import "../signin/signin.css";
 const Signin = ()=>{
     return(
@@ -45,7 +46,7 @@ const Signin = ()=>{
             </div>
 
         </section>
-
+        <Referral/>
         </div>
         </>
     )

@@ -15,19 +15,19 @@ const userschema= new Schema({
         type :String,
         required:true,unique:true
     },
-    address:{
-        type:String,
-        required:true
-    },
     password:{
         type :String,
         required:true
     },
-    state:{
+    address:{
         type:String,
         required:true
     },
     district:{
+        type:String,
+        required:true
+    },
+    state:{
         type:String,
         required:true
     },
@@ -36,7 +36,7 @@ const userschema= new Schema({
         required:true
     }
 })
-
-const usermodal=mongoose.model("users",userschema)
+// collection name user,
+const usermodal=mongoose.model("user",userschema)
 
 module.exports=usermodal
