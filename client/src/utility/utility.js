@@ -1,4 +1,4 @@
-const Protected = ({children})=> {
+const getToken = ({children})=> {
     const token = localStorage.getItem("Token");
     //""
     return (
@@ -15,3 +15,5 @@ function isAuthenticated(){
     }
     return false;
 }
+
+export {isAuthenticated,getToken,getUser}
