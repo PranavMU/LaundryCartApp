@@ -1,5 +1,5 @@
 const express=require("express")
-const orderModel=require("../modals/order")
+const orderModel=require("../modals/ordermodal")
 
 const router=express.Router()
 
