@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 
 const checkExistingUser = async (name)=> {
     let existingUser = false;
-    await usermodal.find({name: name}|| {phone: phone}).then((userData)=> {
+    await usermodal.find({name: name}).then((userData)=> {
         if(userData.length) {
             existingUser = true;
         }
