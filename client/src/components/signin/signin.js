@@ -1,6 +1,8 @@
-import { Header } from "../header/header";
+import  {Header}  from "../header/header";
 import padlock from "../assests/padlock.svg";
 import Referral from "../referral/referral";
+import Aboutus from "../aboutusfooter/aboutus";
+import Footer from "../footer/footer";
 import "../signin/signin.css";
 const Signin = ()=>{
     return(
@@ -47,6 +49,8 @@ const Signin = ()=>{
 
         </section>
         <Referral/>
+        <Aboutus/>
+        <Footer/>
         </div>
         </>
     )
