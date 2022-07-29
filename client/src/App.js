@@ -7,11 +7,8 @@ const App = ()=>{
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Signin/>}></Route>
-<<<<<<< HEAD
-
-=======
       <Route path="/register" element={<Register/>}></Route>
->>>>>>> 95aeb24ae2742e80add2bdf3c401dbd6cdcaead8
+      <Route path="/order" element={<Createorder/>} ></Route>
     </Routes>
     </BrowserRouter>
     )
