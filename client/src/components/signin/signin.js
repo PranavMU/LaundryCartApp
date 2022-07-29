@@ -4,7 +4,15 @@ import Referral from "../referral/referral";
 import Aboutus from "../aboutusfooter/aboutus";
 import Footer from "../footer/footer";
 import "../signin/signin.css";
+import { useNavigate } from "react-router-dom";
 const Signin = ()=>{
+    const navigate = useNavigate();
+    const gotoregister = ()=>{
+        navigate("/register");
+    }
+    const checktheuser = ()=>{
+        
+    }
     return(
         <>
         <div className="signin-container">
@@ -18,7 +26,7 @@ const Signin = ()=>{
                 <p className="da-12">Don't have An Account?</p>
             </div>
             <div className="button-container">
-            <button className="register-button">Register</button>
+            <button className="register-button" onClick={gotoregister}>Register</button>
 
             </div>
         </section>
@@ -28,8 +36,9 @@ const Signin = ()=>{
                     <p className="signin-12">SIGN IN</p>
                 </div>
                 <div className="vl"></div>
+                <form>
                 <div className="input-section">
-                        <input id="email" placeholder="Mobile/Email"/>
+                        <input id="email" type="text" placeholder="Mobile/Email" onChange={checktheuser}/>
                         <hr className="hr1"></hr>
                 </div>
                 <div className="password-section">
@@ -39,9 +48,11 @@ const Signin = ()=>{
                 <div className="forgot-password">
                     <p className="pass12">Forgot Password?</p>
                 </div>
+
+                </form>
             </div>
             <div className="signin-button-container">
-            <button className="signin-button">Sign In</button>
+            <button className="signin-button" type="submit">Sign In</button>
             <div className="padlock-container">
                 <img src={padlock} alt="err"></img>
             </div>
