@@ -1,0 +1,70 @@
+import { Header } from "../header/header";
+import "../register/register.css";
+const Register = ()=>{
+    return(
+        <>
+        <div className="register-container">
+        <Header/>
+        <section className="left-register-container">
+        <div>
+        <p className="register-core-test">Laundry Service</p>
+        <p className="register-slogan">Doorstep Wash & Dryclean Service</p>
+        </div>
+        <div className="da-2">
+            <p className="da-21">Don't have An Account?</p>
+        </div>
+        <div className="register-button-sontainer">
+            <button className="register-signin-button">Sign In</button>
+        </div>
+        </section>
+        <section className="right-register-container">
+            <div className="register-text">
+                <p className="register-core-title-text">Register</p>
+            </div>
+            <div className="vl1"></div>
+            <form>
+                <div className="register-name-input-section">
+                    <input id="name" type="text" placeholder="Name" className="register-name-input-section-name"/>
+                <hr className="hr3"></hr>
+                </div>
+                 <div className="register-email-input-section">
+                    <input id="email" type="email" placeholder="Email" className="register-email-input-section-email"/>
+                    <hr className="hr4"></hr>   
+                </div>
+                {/*<div className="register-phone-input-section">
+                    <input id="phone" type="text" placeholder="Phone"/>
+                    <hr className="hr5"></hr>   
+                </div>
+                <div className="register-state-input-section">
+                    <input id="state" type="text" placeholder="State"/>
+                    <hr className="hr6"></hr>   
+                </div>
+                <div className="register-district-input-section">
+                    <input id="district" type="text" placeholder="District"/>
+                    <hr className="hr7"></hr>   
+                </div>
+                <div className="register-address-input-section">
+                    <input id="address" type="text" placeholder="Address"/>
+                    <hr className="hr8"></hr>   
+                    </div>
+                    <div className="register-pincode-input-section">
+                    <input id="pincode" type="text" placeholder="Pincode"/>
+                    <hr className="hr9"></hr>   
+                </div>
+                <div className="register-checkbox-input-section">
+                    <input  id="checkbox-register" type="checkbox"/>
+                    <label htmlFor="checkbox-register">I agree to Terms & Condition receiving marketing and promotional materials</label>
+                </div> */}
+            </form>
+            <div className="register-button-container">
+
+            <button type="submit" className="register-button-input-section">Register</button>
+            </div>
+        </section>
+
+        </div>
+        </>
+    )
+}
+
+export default Register;
