@@ -4,6 +4,9 @@ const orderSchema=new mongoose.Schema({
     orderid:{
         type:String
     },
+    email:{
+        type:String
+    },
     producttype:[
         {
             type:{
