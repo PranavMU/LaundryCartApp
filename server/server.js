@@ -2,7 +2,7 @@ const express=require("express");
 const mongoose=require("mongoose");
 const cors=require("cors")
 const dotenv = require('dotenv');
-//const multer = require("multer")();
+const multer = require("multer")();
 const userController = require("./components/routes/user");
 const orderController=require("./components/routes/order")
 var bodyParser = require('body-parser')
@@ -13,7 +13,7 @@ app.use(cors())
 dotenv.config();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-//app.use(multer.array());
+app.use(multer.array());
 app.use(cors())
 
 

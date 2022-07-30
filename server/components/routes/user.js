@@ -13,6 +13,13 @@ router.get("/",(req,res)=>{
     usermodal.find({email:req.body.header}).then((data)=>{res.status(200).send(data);})
     
 });
+router.get("/register",(req,res)=>{
+    usermodal.find().then((data)=>{
+        res.status(200).send({data});
+    }).catch((err)=>{
+        res.status(400).send(err);
+    })
+});
 
 router.post("/register", async (req, res)=> {
     if(await checkExistingUser(req.body.name)) {
@@ -44,7 +51,7 @@ router.post("/login", (req, res)=> {
         if(userData.length) {
             bcrypt.compare(req.body.password, userData[0].password).then((val)=> {
                 if(val) {
-                    const authToken = jwt.sign(userData[0].name, process.env.SECRET_KEY);
+                    const authToken = jwt.sign(userData[0].email, process.env.SECRET_KEY);
                     res.status(200).send({authToken});
                 } else {
                     res.status(400).send("Invalid Password");
