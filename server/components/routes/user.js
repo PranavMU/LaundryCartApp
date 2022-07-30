@@ -13,6 +13,13 @@ router.get("/",(req,res)=>{
     usermodal.find({email:eyJhbGciOiJIUzI1NiJ9.cHJhbmF2.C6txS99r17Fgj5orWM3eNkJyboYfB-gLkhVrgRXDqto}).then((data)=>{res.status(200).send(data);})
     
 });
+router.get("/register",(req,res)=>{
+    usermodal.find().then((data)=>{
+        res.status(200).send({data});
+    }).catch((err)=>{
+        res.status(400).send(err);
+    })
+});
 
 router.post("/register", async (req, res)=> {
     if(await checkExistingUser(req.body.name)) {
