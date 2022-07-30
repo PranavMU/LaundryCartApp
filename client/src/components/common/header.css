@@ -1,7 +1,7 @@
 .header-main{
     top: 0px;
     left: 0px;
-    /* width: 100%; */
+    width: 1440px;
     height: 80px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 2px 48px #0000000F;
@@ -36,7 +36,7 @@
 }
 .header-price{
     top: 13px;
-    left: 1035px;
+    left: 1000px;
     width: 113px;
     height: 78px;
 /* UI Properties */
@@ -51,7 +51,7 @@
 }
 .header-career{
     top: 13px;
-    left: 1116px;
+    left: 1114px;
     width: 113px;
     height: 78px;
 /* UI Properties */
@@ -64,7 +64,7 @@
 }
 .header-username{
     top: 13px;
-    left: 1227px;
+    left: 1228px;
     width: 214px;
     height: 79px;
     display: flex;
@@ -79,7 +79,6 @@
     margin: 10px;
     height: 43px;
     align-self: center;
-    /* UI Properties */
     border-radius: 50%;
 }
 .user-p{

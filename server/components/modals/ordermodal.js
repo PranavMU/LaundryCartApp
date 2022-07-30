@@ -1,9 +1,6 @@
 const mongoose=require("mongoose")
 
 const orderSchema=new mongoose.Schema({
-    orderid:{
-        type:String
-    },
     email:{
         type:String
     },
