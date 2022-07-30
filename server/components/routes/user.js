@@ -12,6 +12,13 @@ const router = express.Router();
 router.get("/",(req,res)=>{
     res.status(200).send("user works");
 });
+router.get("/register",(req,res)=>{
+    usermodal.find().then((data)=>{
+        res.status(200).send({data});
+    }).catch((err)=>{
+        res.status(400).send(err);
+    })
+});
 
 router.post("/register", async (req, res)=> {
     if(await checkExistingUser(req.body.name)) {
