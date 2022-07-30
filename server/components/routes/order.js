@@ -52,4 +52,21 @@ router.get("/show",(req,res)=>{
     res.status(200).send(productList)
 })
 
+router.get('/orders',async function(req,res){
+    try{
+
+        let order=await 
+        orderModel.find({user:req.user})
+        res.status(200).json({status:"success",order})
+        console.log(order)
+    
+    }
+    catch(err){
+        res.status(404).json({
+            status:"failed",
+            message:err
+        })
+    }
+})
+
 module.exports=router
