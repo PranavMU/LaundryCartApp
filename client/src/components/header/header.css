@@ -41,7 +41,7 @@
 }
 
 .ul-singin {
-    top: 13px;
+    top: 20px;
     left: 1333px;
     width: 100px;
     height: 79px;
@@ -53,7 +53,7 @@
     list-style: none;
 }
 li.home {
-    top: 13px;
+    top: 20px;
     left: 991px;
     width: 113px;
     height: 78px;
@@ -65,7 +65,7 @@ li.home {
     list-style: none;
 }
 li.pricing {
-    top: 13px;
+    top: 20px;
     left: 1106px;
     width: 113px;
     height: 78px;
@@ -80,7 +80,7 @@ li.pricing {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 li.career {
-    top: 13px;
+    top: 20px;
     left: 1220px;
     width: 113px;
     height: 78px;
