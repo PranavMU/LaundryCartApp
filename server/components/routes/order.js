@@ -1,5 +1,10 @@
 const express=require("express")
 const orderModel=require("../modals/ordermodal")
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+
+
+
 
 const router=express.Router()
 
@@ -52,21 +57,19 @@ router.get("/show",(req,res)=>{
     res.status(200).send(productList)
 })
 
-router.get('/orders',async function(req,res){
-    try{
-
-        let order=await 
-        orderModel.find({user:req.user})
-        res.status(200).json({status:"success",order})
-        console.log(order)
-    
-    }
-    catch(err){
-        res.status(404).json({
-            status:"failed",
-            message:err
-        })
-    }
-})
+router.get('/orders',(req,res)=>{
+     if(req.headers.authorization) {
+            try {
+              const email = jwt.verify(req.headers.authorization, process.env.SECRET_KEY);
+              orderModel.find({user: email}).then((orders)=> {
+                  res.status(200).send(orders);
+              })
+            } catch(err) {
+              res.status(403).send("User Not Authorized")
+            }
+          } else {
+              res.status(400).send("Missing Authorization token")
+          }
+    });
 
 module.exports=router

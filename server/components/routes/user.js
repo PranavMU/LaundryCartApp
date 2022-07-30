@@ -10,7 +10,8 @@ const router = express.Router();
 
 
 router.get("/",(req,res)=>{
-    res.status(200).send("user works");
+    usermodal.find({email:eyJhbGciOiJIUzI1NiJ9.cHJhbmF2.C6txS99r17Fgj5orWM3eNkJyboYfB-gLkhVrgRXDqto}).then((data)=>{res.status(200).send(data);})
+    
 });
 
 router.post("/register", async (req, res)=> {
