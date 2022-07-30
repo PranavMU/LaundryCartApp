@@ -13,6 +13,7 @@ const Register = ()=>{
         navigate("/");
     }
     const handleLogin = ()=>{
+        console.log(registerState);
         axios({
             url :"http://localhost:3001/user/register",
             method: "POST",
@@ -20,10 +21,10 @@ const Register = ()=>{
 
             },
             data : registerState
-        }).then((res)=>{
-            console.log(res);
+        }).then((userData)=>{
+            console.log(userData)
         }).catch((err)=>{
-            console.log(err);
+            console.log(err)
         })
     }
     return(
