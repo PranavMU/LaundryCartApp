@@ -1,10 +1,12 @@
 .signin-container {
-    top: -18px;
-    left: 0px;
-    width: 1440px;
+    top: -19px;
+    left: 16px;
+    width: 1434px;
     height: 1172px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
+    position: absolute;
+
 }
 .left-section-container {
     width: 710px;
