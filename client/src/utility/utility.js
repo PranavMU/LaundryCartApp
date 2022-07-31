@@ -1,11 +1,8 @@
-const getToken = ({children})=> {
-    const token = localStorage.getItem("Token");
-    //""
-    return (
-        <>
-        {token.length ? children: <Navigate to="/signin"/>}
-        </>
-    )
+function getToken(){
+    if(window.localStorage){
+        return window.localStorage.getItem("Token")
+    }
+    return ""
 }
 
 function isAuthenticated(){
