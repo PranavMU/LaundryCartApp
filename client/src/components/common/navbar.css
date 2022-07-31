@@ -2,14 +2,14 @@
     top: 90px;
     left: 0px;
     width: 57px;
-    height: 852px;
+    height: 933px;
     background:#5861AE 0% 0% no-repeat padding-box;
     opacity: 1;
     position:absolute;
 }
 .nav-home{
     /* Layout Properties */
-    top: 10px;
+    top: 20px;
     left: 20px;
     width: 22px;
     height: 22px;
@@ -27,7 +27,7 @@
     position: absolute;
 }
 .nav-div{
-    top: 130px;
+    top: 100px;
     left: 0px;
     width: 57px;
     height: 47px;
@@ -36,7 +36,7 @@
     position: absolute;
 }
 .nav-list{
-    top: -5px;
+    top: 14px;
     left: 20px;
     width: 25px;
     height: 18px;

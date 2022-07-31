@@ -1,7 +1,7 @@
 .header-main{
     top: 0px;
     left: 0px;
-    width: 1440px;
+    width: 995px;
     height: 80px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 2px 48px #0000000F;
@@ -14,7 +14,7 @@
 .header-name{
     top: 27px;
     left: 45px;
-    width: 108px;
+    width: 70px;
     height: 27px;
     /* UI Properties */
     text-align: left;
@@ -28,7 +28,7 @@
 .header-btn{
     display: inherit;
     position: inherit;
-    margin-right: 57px;
+    /* margin-right: 5px; */
 }
 .header-ul{
     display: -webkit-box;
@@ -45,7 +45,7 @@
     list-style: none;
     position: absolute;
     border-top: 1px solid rgba(0, 0, 0, .1);
-    border-left: 0px;
+    border-left: 1px solid rgba(0, 0, 0, .1);
     border-right: 1px solid rgba(0, 0, 0, .1);
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
@@ -59,6 +59,7 @@
     opacity: 1;
     list-style: none;
     border-top: 1px solid rgba(0, 0, 0, .1);
+    border-left: 1px solid rgba(0, 0, 0, .1);
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     position: absolute;
 }
@@ -84,4 +85,10 @@
 .user-p{
     color: #FFFFFF;
     align-self:center;
+}
+.logout-logo{
+    margin: 10px;
+    height: 30px;
+    align-self: center;
+    
 }

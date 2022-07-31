@@ -1,0 +1,106 @@
+.product-item{
+    height: 70px;
+}
+
+.name-des{
+    position: relative;
+    height: 22px;
+}
+
+
+.product-name{
+    top: 120px;
+    left: 185px;
+    width: 42px;
+    height: 19px;
+    text-align: left;
+    font: normal normal 600 14px/48px Open Sans;
+    letter-spacing: 0px;
+    color: #5861AE;
+    opacity: 1;
+    position: relative;
+
+}
+.product-des{
+    top: 111px;
+    left: 185px;
+    width: 193px;
+    height: 0px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 10px/48px Open Sans;
+    letter-spacing: 0px;
+    color: #76788B;
+    opacity: 1;
+    position: relative;
+}
+.product-quantity{
+    top: 120px;
+    left: 460px;
+    width: 63px;
+    height: 26px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #5861AE;
+    border-radius: 2px;
+    opacity: 1;
+    position: relative;
+}
+.name-de{
+    position: absolute;
+}
+.wash-img{
+    top: 87px;
+    left: 696px;
+    width: 25px;
+    height: 29px;
+    /* UI Properties */
+    background: transparent url('../assests/washing-machine.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+}
+.iron-img{
+    top: 87px;
+    left: 799px;
+    width: 26px;
+    height: 26px;
+    background: transparent url('../assests/ironing.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+}
+.fold-img{
+    top: 87px;
+    left: 899px;
+    width: 28px;
+    height: 28px;
+    background: transparent url('../assests/towel.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+}
+.bleach-img{
+    top: 87px;
+    left: 1010px;
+    width: 16px;
+    height: 26px;
+    background: transparent url('../assests/bleach.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+}
+.all-btn{
+    height: 22px;
+    position: relative;
+}
+.btn-reset{
+    top: 87px;
+    left: 1305px;
+    width: 81px;
+    height: 32px;
+    /* UI Properties */
+    border: 1px solid #5861AE;
+    border-radius: 4px;
+    opacity: 1;
+    position: relative;
+    font:  Open Sans;
+    color: #5861AE;
+    background-color: #FFFFFF;
+
+}

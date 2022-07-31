@@ -4,10 +4,10 @@ const NavBar=()=>{
     return (
         <>
             <div className="nav-main">
-                <h2 className="nav-home"></h2>
-                <h2 className="nav-more"></h2>
+                <div className="nav-home"></div>
+                <div className="nav-more"></div>
                 <div className="nav-div">
-                <h2 className="nav-list"></h2>
+                <span className="nav-list"></span>
                 </div>
                 
             </div>
