@@ -87,12 +87,12 @@ router.get('/history',(req,res)=>{
     });
 
 
-    router.delete("/cancel/:id",(req, res)=> {
-        orderModel.deleteOne({order_id: req.params.id}).then(()=> {
-            res.status(200).send("Order Cancelled Sucessfully")
-        }).catch((err)=> {
-            res.status(400).send(err) 
-        });
+router.delete("/cancel/:id",(req, res)=> {
+    orderModel.deleteOne({order_id: req.params.id}).then(()=> {
+        res.status(200).send("Order Cancelled Sucessfully")
+    }).catch((err)=> {
+        res.status(400).send(err) 
     });
+});
 
 module.exports=router
