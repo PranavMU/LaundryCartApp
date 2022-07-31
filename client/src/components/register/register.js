@@ -12,20 +12,15 @@ const Register = ()=>{
     const gotosignin = ()=>{
         navigate("/");
     }
-    const handleLogin = ()=>{
+    const handleLogin = (event)=>{
+        event.preventDefault();
         console.log(registerState);
-        axios({
-            url :"http://localhost:3001/user/register",
-            method: "POST",
-            headers : {
-
-            },
-            data : registerState
-        }).then((userData)=>{
-            console.log(userData)
+        axios.post("http://localhost:3001/user/register",registerState).then((res)=>{
+            console.log(res)
         }).catch((err)=>{
             console.log(err)
         })
+        navigate("/")
     }
     return(
         <>
@@ -76,6 +71,10 @@ const Register = ()=>{
                 <div className="register-pincode-input-section">
                     <input id="pincode" type="text" placeholder="Pincode" className="register-pincode-input-section-pincode" onChange={(e)=>{setregisterState({...registerState, pincode: e.target.value})}}/>
                     <hr className="hr9"></hr>   
+                </div>
+                <div className="register-password-input-section-base">
+                    <input id="password1" type="password" className="register-password-input-section-password" placeholder="Password" onChange={(e)=>{setregisterState({...registerState, password: e.target.value})}}/>
+                    <hr className="hr10"></hr>
                 </div>
                 <div className="register-checkbox-input-section">
                     <input  id="checkbox-register" type="checkbox"/>
