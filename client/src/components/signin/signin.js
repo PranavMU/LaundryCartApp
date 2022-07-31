@@ -5,14 +5,35 @@ import Aboutus from "../aboutusfooter/aboutus";
 import Footer from "../footer/footer";
 import "../signin/signin.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 const Signin = ()=>{
+    const [signupState,setSignupstate] = useState({})
     const navigate = useNavigate();
     const gotoregister = ()=>{
         navigate("/register");
     }
-    const checktheuser = ()=>{
-        
+    const checktheuser = (e)=>{
+        if(e.target.value.includes("@")){
+            setSignupstate({...signupState,email: e.target.value})
+            console.log(e.target.value);
+        }
+        else{
+            setSignupstate({...signupState, phone: e.target.value});
+            console.log(e.target.value);
+        }
     }
+    const handleLogin = (event)=>{
+        event.preventDefault();;
+        console.log(signupState);
+        axios.post("http://localhost:3001/user/login",signupState).then((logindata)=>{
+            localStorage.setItem("authorization",logindata.data.authToken);
+        }).catch((err)=>{
+            console.log(err)
+        })
+        // navigate("/order")
+    }
+
     return(
         <>
         <div className="signin-container">
@@ -38,11 +59,11 @@ const Signin = ()=>{
                 <div className="vl"></div>
                 <form>
                 <div className="input-section">
-                        <input id="email" type="text" placeholder="Mobile/Email" onChange={checktheuser}/>
+                        <input id="email" type="text" placeholder="Mobile/Email" onChange={(e)=>{checktheuser(e)}}/>
                         <hr className="hr1"></hr>
                 </div>
                 <div className="password-section">
-                    <input id="password" placeholder="Password"/>
+                    <input id="password" placeholder="Password" type="password" onChange={(e)=>{setSignupstate({...signupState, password: e.target.value})}}/>
                     <hr className="hr2"></hr>
                 </div>
                 <div className="forgot-password">
@@ -52,7 +73,7 @@ const Signin = ()=>{
                 </form>
             </div>
             <div className="signin-button-container">
-            <button className="signin-button" type="submit">Sign In</button>
+            <button className="signin-button" type="submit" onClick={handleLogin}>Sign In</button>
             <div className="padlock-container">
                 <img src={padlock} alt="err"></img>
             </div>
