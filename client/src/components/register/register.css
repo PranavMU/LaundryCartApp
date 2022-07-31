@@ -304,3 +304,23 @@
     background: #5861AE 0% 0% no-repeat padding-box;
     position: absolute;
 }
+#password1 {
+    top: 503px;
+    left: 572px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838F;
+    opacity: 1;
+    position: absolute;
+    background: #B9C0FD1A 0% 0% no-repeat padding-box;
+    border-style: none;
+}
+.hr10 {
+    width: 324px;
+    position: absolute;
+    top: 537px;
+    left: 572px;
+}
