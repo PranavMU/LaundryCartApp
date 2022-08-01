@@ -28,7 +28,7 @@ const Signin = ()=>{
         console.log(signupState);
         axios.post("http://localhost:3001/user/login",signupState).then((logindata)=>{
             localStorage.setItem("authorization",logindata.data.authToken);
-            navigate("/order")
+            navigate("/order/history")
         }).catch((err)=>{
             alert("your email/phonenumber unauthorized");
         })
