@@ -9,6 +9,7 @@ import { useState } from "react";
 import axios from "axios";
 const Signin = ()=>{
     const [signupState,setSignupstate] = useState({})
+    const [passwordShown,setPasswordShown] = useState(false);
     const navigate = useNavigate();
     const gotoregister = ()=>{
         navigate("/register");
@@ -32,6 +33,9 @@ const Signin = ()=>{
         }).catch((err)=>{
             alert("your email/phonenumber unauthorized");
         })
+    }
+    const togglePassword = ()=>{
+        setPasswordShown(!passwordShown);
     }
 
     return(
@@ -63,7 +67,7 @@ const Signin = ()=>{
                         <hr className="hr1"></hr>
                 </div>
                 <div className="password-section">
-                    <input id="password" placeholder="Password" type="password" onChange={(e)=>{setSignupstate({...signupState, password: e.target.value})}}/>
+                    <input id="password" placeholder="Password" type={passwordShown ? "text" : "password"} onChange={(e)=>{setSignupstate({...signupState, password: e.target.value})}}/>
                     <hr className="hr2"></hr>
                 </div>
                 <div className="forgot-password">
@@ -75,7 +79,7 @@ const Signin = ()=>{
             <div className="signin-button-container">
             <button className="signin-button" type="submit" onClick={handleLogin}>Sign In</button>
             <div className="padlock-container">
-                <img src={padlock} alt="err"></img>
+                <img src={padlock} onClick={togglePassword} alt="err"></img>
             </div>
             </div>
 
