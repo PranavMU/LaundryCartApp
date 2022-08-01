@@ -1,5 +1,5 @@
 .header-container {
-    top: 0px;
+    top: 18px;
     left: 0px;
     width: 1440px;
     height: 80px;
@@ -7,7 +7,7 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 2px 48px #0000000F;
     opacity: 1;
-    position: initial;
+    position: absolute;
 }
 
 .header-text {
@@ -41,7 +41,7 @@
 }
 
 .ul-singin {
-    top: 20px;
+    top: -65px;
     left: 1333px;
     width: 100px;
     height: 79px;
@@ -53,7 +53,7 @@
     list-style: none;
 }
 li.home {
-    top: 20px;
+    top: -65px;
     left: 991px;
     width: 113px;
     height: 78px;
@@ -65,7 +65,7 @@ li.home {
     list-style: none;
 }
 li.pricing {
-    top: 20px;
+    top: -65px;
     left: 1106px;
     width: 113px;
     height: 78px;
@@ -80,7 +80,7 @@ li.pricing {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 li.career {
-    top: 20px;
+    top: -65px;
     left: 1220px;
     width: 113px;
     height: 78px;
