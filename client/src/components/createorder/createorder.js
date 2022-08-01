@@ -7,10 +7,11 @@ import "./style.css"
 const Createorder=()=>{
     return (
         <>
+        <div className="create-order">
         <Header/>
         <NavBar/>
         <div>
-        <h3 className="page-head">Create order</h3>     
+        <h3 className="page-head">Create Order</h3>     
         </div>
         <Search/>
         <div className='page-titlebar'>
@@ -21,6 +22,7 @@ const Createorder=()=>{
         </div>
         <Productlist/>
         <Footer/>
+        </div>
         </>
     )
 }
