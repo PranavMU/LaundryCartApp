@@ -99,7 +99,7 @@
     position: absolute;
 }
 .order-price{
-    top: 62px;
+    top: 56px;
     left: 1132px;
     width: 18px;
     height: 24px;
@@ -111,11 +111,11 @@
     position:relative;
 }
 .all-btn{
-    height: 22px;
+    height: 25px;
     position: relative;
 }
 .btn-reset{
-    top: 57px;
+    top: 29px;
     left: 1305px;
     width: 81px;
     height: 32px;

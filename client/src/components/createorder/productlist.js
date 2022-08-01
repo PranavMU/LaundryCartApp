@@ -47,16 +47,14 @@ const productList={
 
 
 const Productlist=()=>{
+
     const [isactive,setisactive]=useState({wash:false,iron:false,fold:false,bleach:false})
     const [alldata,setdata]=useState({})
-    const handleclick=()=>{
-        console.log("hi")
-    }
     const handlewash=(e)=>{
-        setisactive(current => !current);
-        if(isactive){
+        setisactive({...isactive,wash:(!isactive.wash)})
+        if(isactive.wash){
             e.target.setAttribute("style", 'background-image:url(/washing-machine.svg')
-            setdata({...alldata,washing:""})
+            setdata({...alldata,washing:0})
         }else{
             e.target.setAttribute("style", 'background-image:url(/washing-machin.svg)')
             setdata({...alldata,washing:10})
@@ -64,9 +62,36 @@ const Productlist=()=>{
     
     }
     const handleiron=(e)=>{
-        
+        setisactive({...isactive,iron:(!isactive.iron)})
+        if(isactive.iron){
+            e.target.setAttribute("style", 'background-image:url(/ironing.svg')
+            setdata({...alldata,iron:0})
+        }else{
+            e.target.setAttribute("style", 'background-image:url(/ironings.svg)')
+            setdata({...alldata,iron:10})
+        }
     }
-
+    const handlefold=(e)=>{
+        setisactive({...isactive,fold:(!isactive.fold)})
+        if(isactive.fold){
+            e.target.setAttribute("style", 'background-image:url(/towel.svg')
+            setdata({...alldata,fold:0})
+        }else{
+            e.target.setAttribute("style", 'background-image:url(/towels.svg)')
+            setdata({...alldata,fold:15})
+        }
+    }
+    const handlebleach=(e)=>{
+        setisactive({...isactive,bleach:(!isactive.bleach)})
+        if(isactive.bleach){
+            e.target.setAttribute("style", 'background-image:url(/bleach.svg')
+            setdata({...alldata,bleach:0})
+        }else{
+            e.target.setAttribute("style", 'background-image:url(/bleachs.svg)')
+            setdata({...alldata,bleach:20})
+        }
+    }
+    let sum=alldata.wash+alldata.iron+alldata.fold+alldata.bleach
     return (
         <>
             {
@@ -92,9 +117,9 @@ const Productlist=()=>{
                             <span className='fold-img' onClick={handlefold}></span>
                             <span className='bleach-img' onClick={handlebleach}></span>
                         </div>
-                        <div className="order-price" >{ isactive && alldata.quantity ? `${alldata.quantity}x${alldata.washing}=${alldata.quantity*alldata.washing}` : '_'}</div>
+                        <div className="order-price" >{ isactive.bleach  ? `${alldata.quantity}x${sum}=${alldata.quantity*sum}` : '—'}</div>
                         <div className='main-btn'>
-                        <button className='btn-reset' onClick={handleclick}>Reset</button>
+                        <button className='btn-reset' >Reset</button>
                         </div>
                         </div>
                         </>
