@@ -40,7 +40,7 @@ const Pastorders =()=>{
             data.map((order,i)=>{
                 return (
         <div className='page-titlebar' key={i}>
-            <span className='orderid'>{Order Id}</span>
+            <span className='orderid'>Order Id</span>
             <span className='orderdatetime'>Order Date & Time</span>
             <span className='StoreLocation' >Store Location</span>
             <span className='City'>City</span>
