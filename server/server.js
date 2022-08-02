@@ -2,18 +2,19 @@ const express=require("express");
 const mongoose=require("mongoose");
 const cors=require("cors")
 const dotenv = require('dotenv');
-//const multer = require("multer")();
+const multer = require("multer")();
 const userController = require("./components/routes/user");
-const orderController=require("./components/routes/order")
+const orderController=require("./components/routes/order");
+const bodyParser = require("body-parser");
 //var bodyParser = require('body-parser')
 const app=express();
 
 // parsers
 app.use(cors())
 dotenv.config();
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
-//app.use(multer.array());
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(multer.array());
 app.use(cors())
 
 
