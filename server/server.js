@@ -6,7 +6,6 @@ const multer = require("multer")();
 const userController = require("./components/routes/user");
 const orderController=require("./components/routes/order");
 const bodyParser = require("body-parser");
-//var bodyParser = require('body-parser')
 const app=express();
 
 // parsers
