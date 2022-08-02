@@ -17,12 +17,63 @@ const Items=({content,state,setState})=>{
     let count = 0;
     if (washSelected === washBlue){
       count++
+      if(content.name==="Shirts"){
+        content.price=10
+      }
+      else if(content.name==="TShirts"){
+        content.price=10
+      }
+      else if(content.name==="Trousers"){
+        content.price=15
+      }else if(content.name==="Jeans"){
+        content.price=20
+      }else if(content.name==="Boxers"){
+        content.price=15
+      }else if(content.name==="Joggers"){
+        content.price=20
+      }else{
+        content.price=25
+      }
     } 
     if (ironingSelected === ironingBlue){
       count++
+      if(content.name==="Shirts"){
+        content.price=10
+      }
+      else if(content.name==="TShirts"){
+        content.price=10
+      }
+      else if(content.name==="Trousers"){
+        content.price=15
+      }else if(content.name==="Jeans"){
+        content.price=20
+      }else if(content.name==="Boxers"){
+        content.price=15
+      }else if(content.name==="Joggers"){
+        content.price=20
+      }else{
+        content.price=25
+      }
     } 
     if (towelSelected === towelBlue){
       count++
+      if(content.name==="Shirts"){
+        content.price=15
+      }
+      else if(content.name==="TShirts"){
+        content.price=15
+      }
+      else if(content.name==="Trousers"){
+        content.price=20
+      }else if(content.name==="Jeans"){
+        content.price=25
+      }else if(content.name==="Boxers"){
+        content.price=20
+      }else if(content.name==="Joggers"){
+        content.price=25
+      }else{
+        content.price=30
+      }
     } 
     if (bleachSelected === bleachBlue){
       count++
@@ -44,11 +95,8 @@ const Items=({content,state,setState})=>{
       const data = {
         name: content.name,
         washType: `${washSelected === washBlue ? 'Washing ' : ''}${ironingSelected === ironingBlue ? ',Ironing ' : ''}${towelSelected === towelBlue ? ',DryCleaning ' : ''}${bleachSelected === bleachBlue ? ',Bleaching ' : ''}`,
-  
         multiple: `${quantity}X${content.price * count}`,
-  
         price: quantity * content.price * count,
-  
         count: Number(quantity),
       };
   

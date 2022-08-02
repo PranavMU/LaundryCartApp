@@ -19,38 +19,38 @@ const productList={
                         "name":"Shirts",
                         "description":"Lorem Ipsum is simply dummy text",
                         "image":arr[0],
-                        price:10,
+                        price:0,
                     },
                     {
                         "name":"TShirts",
                         "description":"Lorem Ipsum is simply dummy text",
                         "image":arr[1],
-                        price:10,
+                        price:0,
                     },{
                         "name":"Trousers",
                         "description":"Lorem Ipsum is simply dummy text",
                         "image":arr[2],
-                        price:15,
+                        price:0,
                     },{
                         "name":"Jeans",
                         "description":"Lorem Ipsum is simply dummy text",
                         "image":arr[3],
-                        price:20,
+                        price:0,
                     },{
                         "name":"Boxers",
                         "description":"Lorem Ipsum is simply dummy text",
                         "image":arr[4],
-                        price:15,
+                        price:0,
                     },{
                         "name":"Joggers",
                         "description":"Lorem Ipsum is simply dummy text",
                         "image":arr[5],
-                        price:20,
+                        price:0,
                     },{
                         "name":"Others",
                         "description":"Lorem Ipsum is simply dummy text",
                         "image":arr[6],
-                        price:25,
+                        price:0,
                     },
                 ]
 }           
