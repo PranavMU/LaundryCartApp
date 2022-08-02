@@ -7,12 +7,13 @@ margin-top: 20px;
 font-family: sans-serif;
 }
 
-button{
-   left: 1070px;
-    top: -58px;
+.goto{
+left: 1070px;
+top: -58px;
 width: 107px;
 height: 32px;
 color: #5861AE;
+cursor: pointer;
 
 /* UI Properties */
 border: 1px solid #5861AE;
@@ -292,17 +293,20 @@ position:absolute;
         opacity: 1;
         position:absolute;
     }
-    .canc2{
+    .openModalBtn{
         top: 16px;
         left: 1100px;
-        width: 73px;
+        width: 100px;
         height: 17px;
+        border: none;
+        cursor: pointer;
         /* UI Properties */
         text-align: left;
         font:11.5px sans-serif;
         letter-spacing: 0px;
+        background: white;
         color: #EB1717;
-        opacity: 1;
+        
         position:absolute;
     }
     

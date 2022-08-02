@@ -32,6 +32,7 @@ const Signin = ()=>{
         event.preventDefault();;
         console.log(signupState);
         axios.post("http://localhost:3001/user/login",signupState).then((logindata)=>{
+            console.log(logindata.data)
             localStorage.setItem("authorization",logindata.data.authToken);
             navigate("/order/history")
         }).catch((err)=>{

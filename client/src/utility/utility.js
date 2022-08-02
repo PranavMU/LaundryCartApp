@@ -13,4 +13,4 @@ function isAuthenticated(){
     return false;
 }
 
-export {isAuthenticated,getToken,getUser}
+export {isAuthenticated,getToken}
