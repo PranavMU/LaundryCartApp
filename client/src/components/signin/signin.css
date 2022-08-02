@@ -206,3 +206,16 @@
         bottom: 171px;
         left: 213px;
     }
+    .input-section-error-state {
+        top: 10px;
+        left: 139px;
+        width: 207px;
+        height: 22px;
+    /* UI Properties */
+        text-align: left;
+        font: italic normal normal 12px/27px Open Sans;
+        letter-spacing: 0.42px;
+        position: absolute;
+        color: #EF1A1A;
+        opacity: 1;
+    }

@@ -10,7 +10,7 @@ import axios from "axios";
 const Signin = ()=>{
     const [signupState,setSignupstate] = useState({})
     const [passwordShown,setPasswordShown] = useState(false);
-    // const [color,setColor] = useState('black');
+    const [err,setErr] = useState(false);
     const navigate = useNavigate();
     const gotoregister = ()=>{
         navigate("/register");
@@ -35,7 +35,8 @@ const Signin = ()=>{
             localStorage.setItem("authorization",logindata.data.authToken);
             navigate("/order/history")
         }).catch((err)=>{
-            alert("your email/phonenumber unauthorized");
+            // alert("your email/phonenumber unauthorized");
+            setErr(true);
             
             
             }
@@ -72,8 +73,9 @@ const Signin = ()=>{
                 </div>
                 <div className="vl"></div>
                 <form>
-                <div className="input-section">
+                <div className="input-section" style={{position: "relative"}}>
                         <input id="email" type="text" style={{color: "red"}} placeholder="Mobile/Email" onChange={(e)=>{checktheuser(e)}}/>
+                        {err && <p className="input-section-error-state">Please enter a valid phone number</p>}
                         <hr className="hr1"></hr>
                 </div>
                 <div className="password-section">
