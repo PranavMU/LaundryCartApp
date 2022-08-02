@@ -34,7 +34,7 @@ const userschema= new Schema({
     pincode:{
         type:String,
         required:true
-    }
+    },
 })
 // collection name user,
 const usermodal=mongoose.model("user",userschema)
