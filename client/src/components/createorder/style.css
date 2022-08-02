@@ -1,3 +1,9 @@
+/* .create-order{
+    position: relative;
+    z-index: 1;
+} */
+
+
 .page-head{
     top: 85px;
     left: 108px;
@@ -13,17 +19,17 @@
 }
 .page-titlebar{
     top: 176px;
-    left: 108px;
+    left: 258px;
     width: 1295px;
     height: 50px;
     background: #2F2F2F 0% 0% no-repeat padding-box;
     border: 1px solid #E0E0E0;
     border-radius: 2px;
     opacity: 1;
-    position: absolute;
+    position:absolute
 }
 .product-type{
-    top: 0px;
+    top: -5px;
     left: 24px;
     width: 162px;
     height: 27px;
@@ -35,8 +41,8 @@
     position: absolute;
 }
 .quantity{
-    top: 0px;
-    left: 357px;
+    top: -5px;
+    left: 367px;
     width: 162px;
     height: 27px;
     text-align: left;
@@ -47,8 +53,8 @@
     position: absolute;
 }
 .wash-type{
-    top: 0px;
-    left: 589px;
+    top: -5px;
+    left: 599px;
     width: 162px;
     height: 27px;
     text-align: left;
@@ -59,8 +65,8 @@
     position: absolute;
 }
 .price{
-    top: 0px;
-    left: 1018px;
+    top: -5px;
+    left: 1028px;
     width: 162px;
     height: 27px;
     /* UI Properties */
@@ -71,9 +77,19 @@
     opacity: 1;
     position: absolute;
 }
+.summary-page{
+    top: 13px;
+    left: 516px;
+    width: 926px;
+    height: 953px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+}
 .summary-header{
     top: 0px;
-    left: 514px;
+    left: 0px;
     width: 926px;
     height: 70px;
     background: #5861AE 0% 0% no-repeat padding-box;
@@ -82,21 +98,25 @@
     display: flex;
     justify-content: space-between;
     color: #FFFFFF;
+    z-index: 100;
 
 }
 .header-close, .header-sum{
-    margin: 15px;
+    color: #FFFFFF;
+    margin: 10px;
     width: 19px;
     height: 19px;
+    z-index: 100;
 }
 .store-add{
     top: 72px;
-    left: 514px;
+    left: 0px;
     width: 926px;
     height: 98px;
     background: #F4F9FF 0% 0% no-repeat padding-box;
     opacity: 1;
     position: absolute;
+    z-index: 100;
 }
 .store-loc{
     top: 30px;
@@ -109,9 +129,10 @@
     color: #3E3F40;
     opacity: 0.13;
     position:absolute;
+    z-index: 100;
 }
 .store-name{
-    top: 15px;
+    top: 12px;
     left: 340px;
     width: 121px;
     height: 22px;
@@ -121,10 +142,11 @@
     color: #1B2734;
     opacity: 1;
     position: absolute;
+    z-index: 100;
 }
 
 .store-phone{
-    top: 15px;
+    top: 12px;
     left: 650px;
     width: 51px;
     height: 22px;
@@ -134,10 +156,38 @@
     color: #1B2734;
     opacity: 1;
     position: absolute;
+    z-index: 100;
 }
+.store-add-val{
+    top: 35px;
+    left: 340px;
+    width: 232px;
+    height: 22px;
+    text-align: left;
+    font: normal normal normal 16px/22px Open Sans;
+    letter-spacing: 0.38px;
+    color: #1B2734;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+}
+.store-phone-val{
+    top: 35px;
+    left: 650px;
+    width: 123px;
+    height: 22px;
+    text-align: left;
+    font: normal normal normal 16px/22px Open Sans;
+    letter-spacing: 0.38px;
+    color: #1B2734;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+}
+
 .section-name{
     top: 190px;
-    left: 547px;
+    left: 20px;
     width: 91px;
     height: 19px;
     text-align: left;
@@ -146,10 +196,63 @@
     color: #3B3737;
     opacity: 1;
     position: absolute;
+    z-index: 100;
+}
+.order-details{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 25px;
+}
+.item-type{
+    top: 233px;
+    width: 55px;
+    height: 24px;
+    text-align: left;
+    font: normal normal normal 18px/24px Open Sans;
+    letter-spacing: 0.43px;
+    color: #1B2734;
+    opacity: 1;
+    position: relative;
+}
+.item-method{
+    top: 238px;
+    width: 119px;
+    height: 22px;
+    text-align: left;
+    font: italic normal normal 16px/22px Open Sans;
+    letter-spacing: 0.38px;
+    color: #1B2734;
+    opacity: 1;
+    position: relative;
+}
+.item-eq{
+    top: 235px;
+    right:0px;
+    width: 62px;
+    height: 22px;
+    text-align: left;
+    font: normal normal 600 16px/22px Open Sans;
+    letter-spacing: 0.38px;
+    color: #1B2734;
+    opacity: 1;
+    position: relative;
+}
+.item-price{
+    top: 233px;
+    right: 30px;
+    width: 35px;
+    height: 27px;
+    text-align: left;
+    font: normal normal 600 20px/27px Open Sans;
+    letter-spacing: 0.48px;
+    color: #5861AE;
+    opacity: 1;
+    position: relative;
 }
 .sec-sub{
     top: 407px;
-    left: 1192px;
+    left: 665px;
     width: 74px;
     height: 22px;
     text-align: left;
@@ -158,10 +261,25 @@
     color: #1B2734;
     opacity: 1;
     position: absolute;
+    z-index: 100;
+}
+.sec-val{
+    top: 405px;
+    left: 833px;
+    width: 32px;
+    height: 24px;
+    text-align: left;
+    font: normal normal 600 18px/24px Open Sans;
+    letter-spacing: 0.43px;
+    color: #272727;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+
 }
 .pickup{
     top: 453px;
-    left: 1148px;
+    left: 622px;
     width: 124px;
     height: 22px;
     text-align: left;
@@ -170,15 +288,30 @@
     color: #1B2734;
     opacity: 1;
     position: absolute;
+    z-index: 100;
+}
+.pick-val{
+    top: 453px;
+    left: 834px;
+    width: 21px;
+    height: 24px;
+    text-align: left;
+    font: normal normal 600 18px/24px Open Sans;
+    letter-spacing: 0.43px;
+    color: #272727;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
 }
 .total-bar{
-    top: 486px;
-    left: 546px;
+    top: 496px;
+    left: 35px;
     width: 848px;
     height: 49px;
     background: #5861AE 0% 0% no-repeat padding-box;
     opacity: 1;
     position: absolute;
+    z-index: 100;
 }
 .name-total{
     top: 12px;
@@ -192,10 +325,23 @@
     text-transform: capitalize;
     opacity: 1;
     position: relative;
+    z-index: 100;
+}
+.total-val{
+    top: 7px;
+    left: 754px;
+    width: 71px;
+    height: 30px;
+    text-align: left;
+    font: normal normal bold 22px/30px Open Sans;
+    letter-spacing: 0.53px;
+    color:white;
+    opacity: 1;
+    position: absolute;
 }
 .user-add{
     top: 566px;
-    left: 549px;
+    left: 20px;
     width: 57px;
     height: 19px;
     text-align: left;
@@ -206,10 +352,10 @@
     position: absolute;
 }
 .btn-bar{
-    top: 861px;
-    left: 514px;
+    top: 933px;
+    left: 0px;
     width: 926px;
-    height: 70px;
+    height: 85px;
     /* UI Properties */
     background: #F4F4F4 0% 0% no-repeat padding-box;
     box-shadow: 0px -3px 6px #00000015;
@@ -227,4 +373,63 @@
     opacity: 1;
     color: #FFFFFF;
     position: absolute;
+}
+.success-page{
+    top: 199px;
+    left: 529px;
+    width: 466px;
+    height: 504px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E5E0E0;
+    border-radius: 8px;
+    opacity: 1;
+    z-index: 100;
+    position:absolute;
+}
+.success-img{
+    top: 101px;
+    left: 182px;
+    width: 120px;
+    height: 120px;
+    /* UI Properties */
+    background: #5861AE60 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+}
+.success-status{
+    top: 249px;
+    left: 94px;
+    width: 297px;
+    height: 66px;
+    text-align: center;
+    font: normal normal bold 24px/33px Open Sans;
+    letter-spacing: 0.43px;
+    color: #0A1F44;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+}
+.success-details{
+    top: 299px;
+    left: 111px;
+    width: 263px;
+    height: 45px;
+    text-align: center;
+    font: normal normal normal 17px/22px Open Sans;
+    letter-spacing: -0.41px;
+    color: #0A1F44;
+    opacity: 1;
+    position: absolute;
+}
+.success-btn{
+    top: 377px;
+    left: 120px;
+    width: 235px;
+    height: 44px;
+    background: #5861AE 0% 0% no-repeat padding-box;
+    border-radius: 22px;
+    opacity: 1;
+    position:absolute;
+    color: white;
 }

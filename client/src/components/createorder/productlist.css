@@ -65,7 +65,6 @@
     width: 25px;
     height: 29px;
     /* UI Properties */
-    background: transparent url('../assests/washing-machine.svg') 0% 0% no-repeat padding-box;
     /* background: transparent url('../assests/washing-machine\ \(1\).svg') 0% 0% no-repeat padding-box; */
     opacity: 1;
     position: absolute;
@@ -75,7 +74,7 @@
     left: 799px;
     width: 26px;
     height: 26px;
-    background: transparent url('../assests/ironing.svg') 0% 0% no-repeat padding-box;
+
     opacity: 1;
     position: absolute;
 }
@@ -84,7 +83,6 @@
     left: 899px;
     width: 28px;
     height: 28px;
-    background: transparent url('../assests/towel.svg') 0% 0% no-repeat padding-box;
     opacity: 1;
     position: absolute;
 }
@@ -94,7 +92,6 @@
     left: 1010px;
     width: 16px;
     height: 26px;
-    background: transparent url('../assests/bleach.svg') 0% 0% no-repeat padding-box;
     opacity: 1;
     position: absolute;
 }
