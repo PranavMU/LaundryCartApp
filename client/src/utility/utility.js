@@ -1,3 +1,5 @@
+import { Navigate } from "react-router-dom";
+
 function getToken(){
     if(window.localStorage){
         return window.localStorage.getItem("Token")
@@ -13,4 +15,15 @@ function isAuthenticated(){
     return false;
 }
 
-export {isAuthenticated,getToken,getUser}
+const Protected = ({children})=> {
+    const token = localStorage.getItem("authorization");
+    //""
+    return (
+        <>
+        {token.length ? children: <Navigate to="/"/>}
+        </>
+    )
+}
+ 
+
+export {isAuthenticated,getToken,Protected}

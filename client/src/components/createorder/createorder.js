@@ -4,10 +4,10 @@ import Footer from "../common/footer"
 import Search from "../common/search"
 import Productlist from "./productlist"
 import "./style.css"
+//need to check authorition
 const Createorder=()=>{
     return (
         <>
-        
         <div className="create-order">
         <Header/>
         <NavBar/>

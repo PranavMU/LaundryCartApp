@@ -16,72 +16,85 @@ const Items=({content,state,setState})=>{
   
     let count = 0;
     if (washSelected === washBlue){
-      count++
       if(content.name==="Shirts"){
-        content.price=10
+        count=count+10
       }
       else if(content.name==="TShirts"){
-        content.price=10
+        count=count+10
       }
       else if(content.name==="Trousers"){
-        content.price=15
+        count=count+15
       }else if(content.name==="Jeans"){
-        content.price=20
+        count=count+20
       }else if(content.name==="Boxers"){
-        content.price=15
+        count=count+15
       }else if(content.name==="Joggers"){
-        content.price=20
+        count=count+20
       }else{
-        content.price=25
+        count=count+25
       }
     } 
     if (ironingSelected === ironingBlue){
-      count++
       if(content.name==="Shirts"){
-        content.price=10
+        count=count+10
       }
       else if(content.name==="TShirts"){
-        content.price=10
+        count=count+10
       }
       else if(content.name==="Trousers"){
-        content.price=15
+        count=count+15
       }else if(content.name==="Jeans"){
-        content.price=20
+        count=count+20
       }else if(content.name==="Boxers"){
-        content.price=15
+        count=count+15
       }else if(content.name==="Joggers"){
-        content.price=20
+        count=count+20
       }else{
-        content.price=25
+        count=count+25
       }
     } 
     if (towelSelected === towelBlue){
-      count++
       if(content.name==="Shirts"){
-        content.price=15
+        count=count+15
       }
       else if(content.name==="TShirts"){
-        content.price=15
+        count=count+15
       }
       else if(content.name==="Trousers"){
-        content.price=20
+        count=count+20
       }else if(content.name==="Jeans"){
-        content.price=25
+        count=count+25
       }else if(content.name==="Boxers"){
-        content.price=20
+        count=count+20
       }else if(content.name==="Joggers"){
-        content.price=25
+        count=count+25
       }else{
-        content.price=30
+        count=count+30
       }
     } 
     if (bleachSelected === bleachBlue){
-      count++
+      if(content.name==="Shirts"){
+        count=count+20
+      }
+      else if(content.name==="TShirts"){
+        count=count+20
+      }
+      else if(content.name==="Trousers"){
+        count=count+25
+      }else if(content.name==="Jeans"){
+        count=count+30
+      }else if(content.name==="Boxers"){
+        count=count+25
+      }else if(content.name==="Joggers"){
+        count=count+30
+      }else{
+        count=count+35
+      }
     } 
   
     useEffect(() => {
       const newState = state;
-      if (quantity * content.price * count === 0) {
+      if (quantity * count === 0) {
         for (let i = 0; i < newState.length; i++) {
           if (newState[i].name === content.name) {
             newState.splice(i, 1);
@@ -95,8 +108,8 @@ const Items=({content,state,setState})=>{
       const data = {
         name: content.name,
         washType: `${washSelected === washBlue ? 'Washing ' : ''}${ironingSelected === ironingBlue ? ',Ironing ' : ''}${towelSelected === towelBlue ? ',DryCleaning ' : ''}${bleachSelected === bleachBlue ? ',Bleaching ' : ''}`,
-        multiple: `${quantity}X${content.price * count}`,
-        price: quantity * content.price * count,
+        multiple: `${quantity}X${count}`,
+        price: quantity * count,
         count: Number(quantity),
       };
   
@@ -107,7 +120,7 @@ const Items=({content,state,setState})=>{
         }
       }
       setState([...newState, data]);
-    }, [quantity * content.price * count]);
+    }, [quantity * count]);
   
     const handlereset = () => {
       setquantity(0);
@@ -136,10 +149,10 @@ const Items=({content,state,setState})=>{
             <img  className='bleach-img' src={bleachSelected} alt='bleach' onClick={() =>setbleachSelected(bleachSelected === bleachBlue ? bleachNormal : bleachBlue)}/>
         </div>
         <div className="order-price">
-          {quantity * content.price * count ? (`${quantity}X${content.price * count}=${quantity * content.price * count}`) : ('—')}
+          {quantity  * count ? (`${quantity}X${count}=${quantity * count}`) : ('—')}
         </div>
         <div className='main-btn'>
-          {quantity * content.price * count ? <button className='btn-reset' onClick={handlereset}>Reset</button> : "" }
+          {quantity * count ? <button className='btn-reset' onClick={handlereset}>Reset</button> : "" }
         </div>
       </div>
         </>
