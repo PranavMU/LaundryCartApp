@@ -1,6 +1,6 @@
 function getToken(){
     if(window.localStorage){
-        return window.localStorage.getItem("Token")
+        return window.localStorage.getItem("authorization")
     }
     return ""
 }

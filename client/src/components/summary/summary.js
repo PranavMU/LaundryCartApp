@@ -7,7 +7,7 @@ const Summary =({closesummary})=>{
     // useEffect
     // fetch
 if(viewalert){
-    return <Modal closesummary={setviewalert}/>
+    return <Modal setOpenModal ={setviewalert}/>
 }
 return(
     <>
@@ -32,9 +32,14 @@ return(
             </ul>
             <button  className="close" onClick={() => closesummary(false)}> X </button>
             </div>
-            <div className="statusbar">
-                <p>area for progress bar</p>
-            </div>
+            <div className="track">
+                    <ul type="none" className="track_v">
+                        <li className="t_dis"><input type="radio"/>Pickedup<span className="line">------------------</span></li>
+                        <li className="t_dis"><input type="radio"/>Washed<span className="line">-------------------</span></li>
+                        <li className="t_dis"><input type="radio"/>Ironed<span className="line">-------------------</span></li>
+                        <li className="t_dis"><input type="radio"/>Delivered</li>
+                    </ul>
+                </div>
             <div className="ordersummary">
                 <p>Order Details</p>
                 <div className="totalbar">
@@ -45,11 +50,12 @@ return(
                 <div className="home">
                     <p className="home1"><strong>Home</strong></p>
                     <p>#223, 10th road, Jp Nagar, Bangalore</p>
+                    <button onClick={()=> setviewalert(true)}>Cancel order</button>
                 </div>
             </div>
-            <div className="footer">
+            {/* <div className="footer">
                 <button onClick={()=> setviewalert(true)}>Cancel order</button>
-            </div>
+            </div> */}
         
     </div>
     </>

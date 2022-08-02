@@ -1,7 +1,12 @@
 import React from "react";
 import "./modal.css";
 import warningIcon from "../assests/warning.svg"
-function Modal({ setOpenModal }) {
+function Modal({ setOpenModal,cancelid,cancelOrderfunc }) {
+  const cancelorder=(cancelid)=>{
+      console.log(cancelid)
+      cancelOrderfunc(cancelid)
+      setOpenModal(false)
+  }
     return (
         <div className="modalBackground">
           <div className="modalContainer">
@@ -16,10 +21,10 @@ function Modal({ setOpenModal }) {
             
             <div className="title">
               <img src={warningIcon}  alt="err"></img>   
-              <h1>Are you sure want to cancel the oreder No: OR00001</h1>
+              <h1>Are you sure want to cancel the oreder No:{cancelid}</h1>
            
               
-              <br></br><button>Proceed</button>
+              <br></br><button  onClick={() => {cancelorder(cancelid);}}>Proceed</button>
               </div>
           </div>
         </div>

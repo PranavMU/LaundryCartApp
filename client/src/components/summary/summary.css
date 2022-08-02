@@ -1,6 +1,6 @@
 .sumcontainer{
-margin-top: -230px;
-left: 464px;
+margin-top: -215px;
+left: 444px;
 width: 870px;
 height: 1003px;
 /* UI Properties */
@@ -71,9 +71,30 @@ opacity: 1;
     width: 848px;
     height: 340px;
 }
-.statusbar{
+.track{
     margin-top: 20px;
     height: 67px;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid rgb(168, 168, 168);
+}
+.track_v {
+    display: flex;
+    text-align: center;
+    padding-top: 20px;
+    font: normal normal 600 14px/22px Open ;
+    font-family: sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.38px;
+    color: #1B2734;
+    margin-left: 30px;
+    opacity: 1;
+}
+.t_dis{
+    display: flex;
+    width: 200px;
+}
+.line{
+    width: 100%;
 }
 .totalbar{
     width: 848px;
@@ -83,10 +104,13 @@ opacity: 1;
 /* UI Properties */
     background: #5861AE;
 }
+.downaddress{
+   margin-top: 40px;
+}
 .downaddress p{
     margin-left:50px;
     text-align: left;
-    
+    font-family: sans-serif;
 }
 .home{
     margin-left: 50px;
@@ -117,7 +141,18 @@ box-shadow: 0px -3px 6px #00000015;
 opacity: 1;
 color: white;
 }
-.footer button{
+.downaddress button{
+    width: 150px;
+    padding-bottom: 40px;
+height: 42px;
+color: #FFFFFF;
+padding: 0%;
+/* UI Properties */
+background: #F41313 0% 0% no-repeat padding-box;
+border-radius: 4px; 
+font-family: sans-serif;
+border-color: none;
+opacity: 1;
 
     margin-left: 700px;
 }

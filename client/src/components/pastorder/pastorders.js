@@ -18,29 +18,15 @@ const Pastorders =()=>{
         const navigate = useNavigate();
         const [modalOpen, setModalOpen] = useState(false);
         const [summ,setsumm] = useState(false);
+        const [cancelid,setcancelid] = useState("");
         const gotocreateorder = ()=>{
             navigate("/order");
         }
-        useEffect(()=>{
-        let token=getToken()
-        console.log(token)
-        let header={Authorization:token}
-
-        axios.get('http://localhost:3001/order/history',{headers:header})
-        .then(function (response) {
-            console.log(response.body)
-
-            setorders(response.data.orders)
-           console.log(response.data)
-            }).catch((err)=> {
-                console.log(err)
-            })
-        
-        const cancelOrderfunc=()=>{
+        const cancelOrderfunc=(id)=>{
             let token=getToken()
-            let header={Authorization:"bearer "+token}
+            let header={Authorization:token}
             
-            axios.delete('http://localhost:3001/order/cancel/:id',{headers:header})
+            axios.delete(`http://localhost:3001/order/cancel/${id}`,{headers:header})
             .then(function (response) {
                 console.log(response)
                 if(response.status===200){           
@@ -50,6 +36,22 @@ const Pastorders =()=>{
                 }
             })
         }
+        useEffect(()=>{
+        let token=getToken()
+        
+        let header={Authorization:token}
+        
+        axios.get('http://localhost:3001/order/history',{headers:header})
+        .then(function (response) {
+            
+
+            setorders(response.data)
+           console.log(response.data)
+            }).catch((err)=> {
+                console.log(err)
+            })
+        
+        
         },[]);
         return( 
  
@@ -74,31 +76,33 @@ const Pastorders =()=>{
             <span className='view'>view</span>
             
         </div>
-        {/* {
-            data.map((orders,i)=>{
-                return ( */}
-        <div className='page-titlebar2 '>
-            <span className='orderid2'>OR00001</span>
-            <span className='orderdatetime2'>10 OCT 2021, 10:15</span>
-            <span className='StoreLocation2' >Jp Nagar</span>
-            <span className='City2'>Chennai</span>
-            <span className='StorePhone2'>+91 9768647989</span>
-            <span className='TotalItems2'>10</span>
-            <span className='Price2'>470 Rs</span>
-            <span className='Status2'>Redy to pickup</span>
-            <button
-        className="openModalBtn"
-        onClick={() => {
-          setModalOpen(true);
-        }}>Cancel order</button>{modalOpen && <Modal setOpenModal={setModalOpen} />}
-
-            <img src={eyeIcon} className='view2' alt="err" onClick={() => {
-          setsumm(true);
-        }}></img>{summ && <Summary closesummary={setsumm} />}
-
-        </div>
-                {/* )
-            })} */}
+        
+                {/* {orders?.map((order,key)=>( */}
+                    <div className='page-titlebar2 '>
+                    <span className='orderid2'>OR00001</span>
+                    <span className='orderdatetime2'></span>
+                    <span className='StoreLocation2' >Jp Nagar</span>
+                    <span className='City2'>Chennai</span>
+                    <span className='StorePhone2'>+91 9768647989</span>
+                    <span className='TotalItems2'>10</span>
+                    <span className='Price2'>470 Rs</span>
+                    <span className='Status2'>Redy to pickup</span>
+                    <button
+                className="openModalBtn"
+                onClick={() => { 
+                //   setcancelid(order._id)
+                //   console.log(order)
+                  setModalOpen(true);
+                }}>Cancel order</button>{modalOpen && <Modal setOpenModal={setModalOpen} cancelid={cancelid} cancelOrderfunc={cancelOrderfunc} />}
+        
+                    <img src={eyeIcon} className='view2' alt="err" onClick={() => {
+                  setsumm(true);
+                }}></img>{summ && <Summary closesummary={setsumm} />}
+        
+                </div>
+                {/* ))} */}
+        
+               
 
         <Footer/>
       
