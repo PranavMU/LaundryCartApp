@@ -6,20 +6,20 @@ const orderSchema=new mongoose.Schema({
     },
     producttype:[
         {
-            type:{
+            name:{
                 type:String
             },
-            quantity:{
+            count:{
                 type:Number
             },
-            washtype:{
+            washType:{
                 type:String
             },
             price:{
                 type:Number
             },
-            total:{
-                type:Number
+            multiple:{
+                type:String
             }
         }
     ]

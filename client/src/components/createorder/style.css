@@ -1,8 +1,3 @@
-/* .create-order{
-    position: relative;
-    z-index: 1;
-} */
-
 
 .page-head{
     top: 85px;
@@ -99,7 +94,7 @@
     justify-content: space-between;
     color: #FFFFFF;
     z-index: 100;
-
+    cursor: pointer;
 }
 .header-close, .header-sum{
     color: #FFFFFF;
@@ -127,9 +122,12 @@
     font: normal normal 600 16px/27px Open Sans;
     letter-spacing: 0.56px;
     color: #3E3F40;
-    opacity: 0.13;
+    opacity: 0.53;
     position:absolute;
     z-index: 100;
+}
+.add-opt{
+    opacity: 1;
 }
 .store-name{
     top: 12px;

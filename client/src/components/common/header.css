@@ -36,7 +36,7 @@
 }
 .header-price{
     top: 13px;
-    left: 1000px;
+    left: 995px;
     width: 113px;
     height: 78px;
 /* UI Properties */
@@ -51,7 +51,7 @@
 }
 .header-career{
     top: 13px;
-    left: 1114px;
+    left: 1110px;
     width: 113px;
     height: 78px;
 /* UI Properties */
@@ -65,7 +65,7 @@
 }
 .header-username{
     top: 13px;
-    left: 1228px;
+    left: 1220px;
     width: 214px;
     height: 79px;
     display: flex;
@@ -90,5 +90,5 @@
     margin: 10px;
     height: 30px;
     align-self: center;
-    
+    cursor: pointer;
 }

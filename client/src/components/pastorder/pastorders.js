@@ -3,7 +3,7 @@ import Header from "../common/header"
 import NavBar from "../common/navbar"
 import Footer from "../common/footer"
 import Search from "../common/search"
-import { getToken } from '../../utility/utility'
+import { getToken } from '../../utility/utility1'
 import { useNavigate } from "react-router-dom";
 import React, { useState,useEffect } from 'react';
 import eyeIcon from "../assests/eyeicon.svg"
@@ -29,9 +29,10 @@ const Pastorders =()=>{
             axios.delete(`http://localhost:3001/order/cancel/${id}`,{headers:header})
             .then(function (response) {
                 console.log(response)
+                window.location.reload();
                 if(response.status===200){           
                     console.log(response.data)
-                    
+                    window.location.reload();
                 
                 }
             })
@@ -77,21 +78,21 @@ const Pastorders =()=>{
             
         </div>
         
-                {/* {orders?.map((order,key)=>( */}
-                    <div className='page-titlebar2 '>
-                    <span className='orderid2'>OR00001</span>
-                    <span className='orderdatetime2'></span>
+                {orders.map((order,key)=>(
+                    <div className='page-titlebar2 ' key={key}>
+                    <span className='orderid2'>{order.orderid}</span>
+                    <span className='orderdatetime2'>{order.datetime}</span>
                     <span className='StoreLocation2' >Jp Nagar</span>
                     <span className='City2'>Chennai</span>
                     <span className='StorePhone2'>+91 9768647989</span>
                     <span className='TotalItems2'>10</span>
-                    <span className='Price2'>470 Rs</span>
+                    <span className='Price2'>{order.subtotal+90}Rs</span>
                     <span className='Status2'>Redy to pickup</span>
                     <button
                 className="openModalBtn"
                 onClick={() => { 
-                //   setcancelid(order._id)
-                //   console.log(order)
+                  setcancelid(order._id)
+                  console.log(order)
                   setModalOpen(true);
                 }}>Cancel order</button>{modalOpen && <Modal setOpenModal={setModalOpen} cancelid={cancelid} cancelOrderfunc={cancelOrderfunc} />}
         
@@ -100,7 +101,7 @@ const Pastorders =()=>{
                 }}></img>{summ && <Summary closesummary={setsumm} />}
         
                 </div>
-                {/* ))} */}
+                 ))} 
         
                
 

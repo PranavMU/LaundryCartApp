@@ -1,19 +1,51 @@
 import { useState } from "react"
 import "./style.css"
+import axios from "axios"
+
 const Summary=(props)=>{
-    console.log(props)
+
+    const handlesubmit=()=>{
+        if(add){
+            props.setconfirm(true); 
+        props.setTrigger(false) ;
+        //const time=new Date()
+        
+        axios({
+            url: "http://localhost:3001/order/create",
+            method: "POST",
+            headers: {
+                "authorization":localStorage.authorization
+            },
+            data: {producttype: props.state, 
+                subtotal: props.subtotal,
+                orderid:"ORD0001",
+                datetime:"03 Aug 2022 ,12:12"
+            }
+        }).then((res)=>{
+            console.log(res)
+        }).catch((err)=>{
+            console.log(err)
+        })
+        }else{
+            return window.alert("Please select store address")
+        }
+        
+        //axios.post("http://localhost:3001/order/create",data:{},{headers:{},})
+
+    }
+
     const [add, setAdd]=useState(false)
     return props.trigger ? (
         <>
         <div className="summary-page">
         <div className="summary-header">
             <h2 className="header-sum" >Summary</h2>
-            <h2 className="header-close" onClick={()=>{props.setTrigger(false); props.setCan(false)}} >X</h2>
+            <h2 className="header-close" onClick={()=>{props.setTrigger(false)}} >X</h2>
         </div>
         <div className="store-add">
             <select className="store-loc" onChange={(e)=>{if(e.target.selectedIndex===1){setAdd(true)}else{setAdd(false)}}}>
                 <option value="" >Store Location</option>
-                <option>Jp Nagar</option>
+                <option className="add-opt" >Jp Nagar</option>
             </select>
             <span className="store-name">Store Address:</span>
             <span className="store-phone" >Phone:</span>
@@ -42,7 +74,7 @@ const Summary=(props)=>{
         </section>
         <div className="user-add">Address</div>
         <div className="btn-bar" >
-            <button className="btn-confirm" onClick={()=>{props.setconfirm(true); props.setTrigger(false) ;setTimeout(() => {props.setConfirm(false);}, 5000);}} >Confirm</button>
+            <button className="btn-confirm" onClick={handlesubmit} >Confirm</button>
         </div>
         </div>
         </>
