@@ -10,6 +10,7 @@ import axios from "axios";
 const Signin = ()=>{
     const [signupState,setSignupstate] = useState({})
     const [passwordShown,setPasswordShown] = useState(false);
+    // const [color,setColor] = useState('black');
     const navigate = useNavigate();
     const gotoregister = ()=>{
         navigate("/register");
@@ -21,9 +22,12 @@ const Signin = ()=>{
         }
         else{
             setSignupstate({...signupState, phone: e.target.value});
+            // e.target.value.style.color = "red";
             console.log(e.target.value);
         }
     }
+
+    
     const handleLogin = (event)=>{
         event.preventDefault();;
         console.log(signupState);
@@ -32,8 +36,14 @@ const Signin = ()=>{
             navigate("/order/history")
         }).catch((err)=>{
             alert("your email/phonenumber unauthorized");
-        })
+            
+            
+            }
+        )
     }
+    // let colour = colourChange()
+    
+
     const togglePassword = ()=>{
         setPasswordShown(!passwordShown);
     }
@@ -63,7 +73,7 @@ const Signin = ()=>{
                 <div className="vl"></div>
                 <form>
                 <div className="input-section">
-                        <input id="email" type="text" placeholder="Mobile/Email" onChange={(e)=>{checktheuser(e)}}/>
+                        <input id="email" type="text" style={{color: "red"}} placeholder="Mobile/Email" onChange={(e)=>{checktheuser(e)}}/>
                         <hr className="hr1"></hr>
                 </div>
                 <div className="password-section">
