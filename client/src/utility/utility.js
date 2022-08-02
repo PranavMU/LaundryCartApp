@@ -15,6 +15,28 @@ function isAuthenticated(){
     return false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const Protected = ({children})=> {
     const token = localStorage.getItem("authorization");
     //""
@@ -25,5 +47,19 @@ const Protected = ({children})=> {
     )
 }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export {isAuthenticated,getToken,Protected}
