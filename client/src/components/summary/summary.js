@@ -41,10 +41,15 @@ return(
                     </ul>
                 </div>
             <div className="ordersummary">
+            {/* {closesummary.producttype.map((obj,i)=>{ */}
+            <div className="ordersummary">
                 <p>Order Details</p>
                 <div className="totalbar">
                 </div>
             </div>
+            </div>
+                {/* ) */}
+            {/* })} KEY={I} */}
             <div className="downaddress">
                 <p> Address</p>
                 <div className="home">
