@@ -17,6 +17,7 @@ const Pastorders =()=>{
         const navigate = useNavigate();
         const [modalOpen, setModalOpen] = useState(false);
         const [summ,setsumm] = useState(false);
+        const [price,setprice] =useState(null);
         const [cancelid,setcancelid] = useState("");
         const gotocreateorder = ()=>{
             navigate("/order");
@@ -95,12 +96,13 @@ const Pastorders =()=>{
                   setModalOpen(true);
                 }}>Cancel order</button>
                     <img src={eyeIcon} className='view2' alt="err" onClick={() => {
+                    setprice(order)
                   setsumm(true);
                 }}></img>
         
                 </div>
                  ))} 
-                 {modalOpen && <Modal setOpenModal={setModalOpen} cancelid={cancelid} cancelOrderfunc={cancelOrderfunc} />}{summ && <Summary orders={orders}closesummary={setsumm} />}
+                 {modalOpen && <Modal setOpenModal={setModalOpen} cancelid={cancelid} cancelOrderfunc={cancelOrderfunc} />}{summ && <Summary orders={price}closesummary={setsumm} />}
                  
 
         <Footer/>

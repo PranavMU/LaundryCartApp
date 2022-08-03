@@ -2,7 +2,8 @@ import Modal from "../modals/modal";
 import React, { useState,useEffect } from 'react';
 import "./summary.css";
 
-const Summary =({closesummary})=>{
+const Summary =({closesummary,orders})=>{
+    console.log(orders)
     const[viewalert,setviewalert] = useState(false);
     // useEffect
     // fetch
@@ -41,15 +42,27 @@ return(
                     </ul>
                 </div>
             <div className="ordersummary">
-            {/* {closesummary.producttype.map((obj,i)=>{ */}
-            <div className="ordersummary">
-                <p>Order Details</p>
-                <div className="totalbar">
+            {orders.producttype.map((obj,i)=>{
+                return (
+                <div className="order-details" key={i}>     
+                    <span className="item-type">{obj.name}</span>
+                    <span className="item-method">{obj.washType} </span>
+                    <span className="item-eq">{obj.multiple}=</span>
+                    <span className="item-price">{obj.price}</span>
                 </div>
+                )
+            })}
+        <span className="sec-sub" >Sub Total:</span>
+        <span className="sec-val">{orders.subtotal}</span>
+        <span className="pickup" >Pickup-Charges:</span>
+        <span className="pick-val">90</span>
+        
+        <section className="total-bar">
+            <span className="name-total">Total:</span>
+            <div className="total-val">Rs {orders.subtotal+90}</div>
+        </section>
             </div>
-            </div>
-                {/* ) */}
-            {/* })} KEY={I} */}
+           
             <div className="downaddress">
                 <p> Address</p>
                 <div className="home">
@@ -58,9 +71,7 @@ return(
                     <button onClick={()=> setviewalert(true)}>Cancel order</button>
                 </div>
             </div>
-            {/* <div className="footer">
-                <button onClick={()=> setviewalert(true)}>Cancel order</button>
-            </div> */}
+           
         
     </div>
     </>

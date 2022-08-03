@@ -1,5 +1,5 @@
 .sumcontainer{
-margin-top: -330px;
+margin-top: -317px;
 left: 524px;
 width: 870px;
 height: 1003px;
@@ -149,6 +149,10 @@ sec-sub{
     position: absolute;
     z-index: 100;
 }
+.order-details{
+    margin-top: -170px;
+    margin-left: 120px;
+}
 .total-bar{
     top: 496px;
     left: 35px;
@@ -194,7 +198,8 @@ sec-sub{
     background: #5861AE;
 }
 .downaddress{
-   margin-top: 40px;
+   margin-top: 590px;
+   
 }
 .downaddress p{
     margin-left:50px;

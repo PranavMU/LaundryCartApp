@@ -3,7 +3,7 @@ import "./style.css"
 import axios from "axios"
 
 const Summary=(props)=>{
-
+   
     const handlesubmit=()=>{
         if(add){
             props.setconfirm(true); 
