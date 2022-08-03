@@ -1,12 +1,12 @@
 .sumcontainer{
-margin-top: -317px;
+top:-7px;
 left: 524px;
 width: 870px;
 height: 1003px;
 /* UI Properties */
 background: #FFFFFF 0% 0% no-repeat padding-box;
 opacity: 1;
-position: relative;
+position: absolute;
 
 }
 .header{
@@ -67,9 +67,10 @@ opacity: 1;
 .three{
    margin-left: 140px;
 }
-.ordersummary p{
+.ordersummary{
     width: 848px;
     height: 340px;
+    font-family: sans-serif;
 }
 .track{
     margin-top: 20px;
@@ -96,7 +97,7 @@ opacity: 1;
 .line{
     width: 100%;
 }
-sec-sub{
+.sec-sub1{
     top: 407px;
     left: 665px;
     width: 74px;
@@ -109,7 +110,7 @@ sec-sub{
     position: absolute;
     z-index: 100;
 }
-.sec-val{
+.sec-val1{
     top: 405px;
     left: 833px;
     width: 32px;
@@ -123,7 +124,7 @@ sec-sub{
     z-index: 100;
 
 }
-.pickup{
+.pickup1{
     top: 453px;
     left: 622px;
     width: 124px;
@@ -136,7 +137,7 @@ sec-sub{
     position: absolute;
     z-index: 100;
 }
-.pick-val{
+.pick-val1{
     top: 453px;
     left: 834px;
     width: 21px;
@@ -149,11 +150,11 @@ sec-sub{
     position: absolute;
     z-index: 100;
 }
-.order-details{
+.order-details1{
     margin-top: -170px;
     margin-left: 120px;
 }
-.total-bar{
+.total-bar1{
     top: 496px;
     left: 35px;
     width: 848px;
@@ -163,7 +164,7 @@ sec-sub{
     position: absolute;
     z-index: 100;
 }
-.name-total{
+.name-total1{
     top: 12px;
     left: 651px;
     width: 52px;
@@ -177,7 +178,7 @@ sec-sub{
     position: relative;
     z-index: 100;
 }
-.total-val{
+.total-val1{
     top: 7px;
     left: 754px;
     width: 71px;
@@ -189,7 +190,7 @@ sec-sub{
     opacity: 1;
     position: absolute;
 }
-.totalbar{
+.totalbar1{
     width: 848px;
     height: 49px;
    margin-left: 48px;
@@ -198,8 +199,7 @@ sec-sub{
     background: #5861AE;
 }
 .downaddress{
-   margin-top: 590px;
-   
+   height: 300px;
 }
 .downaddress p{
     margin-left:50px;
@@ -235,21 +235,34 @@ box-shadow: 0px -3px 6px #00000015;
 opacity: 1;
 color: white;
 }
-.downaddress button{
-    width: 150px;
-    padding-bottom: 40px;
-height: 42px;
-color: #FFFFFF;
-padding: 0%;
-/* UI Properties */
-background: #F41313 0% 0% no-repeat padding-box;
-border-radius: 4px; 
-font-family: sans-serif;
-border-color: none;
-opacity: 1;
 
-    margin-left: 700px;
+
+.btn-bar1{
+    top: 952px;
+    left: 0px;
+    width: 926px;
+    height: 85px;
+    /* UI Properties */
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+    box-shadow: 0px -3px 6px #00000015;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
 }
+.btn-confirm1{
+    top: 14px;
+    left: 740px;
+    width: 150px;
+    height: 42px;
+    background: #5861AE 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    border:none ;
+    opacity: 1;
+    color: #FFFFFF;
+    position: absolute;
+background: #F41313 0% 0% no-repeat padding-box;
+}
+
 .topaddress li{
 /* UI Properties */
 text-align: left;

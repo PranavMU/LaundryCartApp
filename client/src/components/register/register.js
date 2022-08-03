@@ -15,7 +15,7 @@ const Register = ()=>{
     const handleLogin = (event)=>{
         event.preventDefault();
         console.log(registerState);
-        axios.post("http://localhost:3001/user/register",registerState).then((res)=>{
+        axios.post("https://laundrycart11.herokuapp.com/user/register",registerState).then((res)=>{
             console.log(res)
         }).catch((err)=>{
             console.log(err)

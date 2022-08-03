@@ -26,7 +26,7 @@ const Pastorders =()=>{
             let token=getToken()
             let header={Authorization:token}
             
-            axios.delete(`http://localhost:3001/order/cancel/${id}`,{headers:header})
+            axios.delete(`https://laundrycart11.herokuapp.com/order/cancel/${id}`,{headers:header})
             .then(function (response) {
                 console.log(response)
                 window.location.reload();
@@ -42,7 +42,7 @@ const Pastorders =()=>{
         
         let header={Authorization:token}
         
-        axios.get('http://localhost:3001/order/history',{headers:header})
+        axios.get('https://laundrycart11.herokuapp.com/order/history',{headers:header})
         .then(function (response) {
             
 
@@ -85,8 +85,8 @@ const Pastorders =()=>{
                     <span className='StoreLocation2' >Jp Nagar</span>
                     <span className='City2'>Chennai</span>
                     <span className='StorePhone2'>+91 9768647989</span>
-                    <span className='TotalItems2'>10</span>
-                    <span className='Price2'>{order.subtotal+90}Rs</span>
+                    <span className='TotalItems2'>{order.items}</span>
+                    <span className='Price2'>{order.subtotal+90} Rs</span>
                     <span className='Status2'>Redy to pickup</span>
                     <button
                 className="openModalBtn"
